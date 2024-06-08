@@ -1,28 +1,27 @@
 import './index.css'
-import React from 'react';
+import { InformationContext } from '../Context';
+import React, {useContext} from 'react';
 
 const Form = () => {
 
-    const [name, setName] = React.useState("");
-    const [creditCardNumber, setCreditCardNumber] = React.useState("");
-    const [expirationDate, setExpirationDate] = React.useState('');
-    const [securityNumber, setSecurityNumber] = React.useState();
+    const context = useContext(InformationContext);
+
 
 function onName (event) {
-    setName(event.target.value)
+    context.setName(event.target.value)
     };
 
 function onCreditCardNumber (event) {
-    setCreditCardNumber(event.target.value)
+    context.setCreditCardNumber(event.target.value)
     };
 function onExpirationDate (event) {
-    setExpirationDate(event.target.value)
+    context.setExpirationDate(event.target.value)
     };
 function onExpirationDate (event) {
-    setExpirationDate(event.target.value)
+    context.setExpirationDate(event.target.value)
     }; 
 function onSecurityNumber (event) {
-    setSecurityNumber(event.target.value)
+    context.setSecurityNumber(event.target.value)
     }; 
 
     return(
@@ -32,26 +31,26 @@ function onSecurityNumber (event) {
                 <label>Name</label>
                 <textarea
                 type="text"
-                value={name}
+                value={context.name}
                 onChange={onName} />
 
                 <label>Credit Card Number</label>
                 <textarea 
                 placeholder="0000 0000 0000 0000" 
-                value={creditCardNumber}
+                value={context.creditCardNumber}
                 onChange={onCreditCardNumber}
                 />
 
                 <label>Expiration Date</label>
                 <textarea 
                 placeholder="MM/DD" 
-                value={expirationDate}
+                value={context.expirationDate}
                 onChange={onExpirationDate}/>
 
                 <label>Security Number</label>
                 <textarea
                 placeholder='000'
-                value={securityNumber} 
+                value={context.securityNumber} 
                 onChange={onSecurityNumber}/>
 
                 <button
