@@ -1,0 +1,12 @@
+form{
+    display: flex;
+    flex-direction: column;
+   
+}
+#userInformation{
+    width: 200px;
+    height: auto;
+   position:relative;
+   left: 66%;
+   top: -52%;
+}
