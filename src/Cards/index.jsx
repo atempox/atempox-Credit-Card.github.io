@@ -14,7 +14,7 @@ const Cards = () => {
         <div id="cardConteiner">
             <div id='cardFront'>
                 <h1>BBVA</h1>
-                <span>{creditCardNumber}</span>
+                <span id='creditCardNumber'>{creditCardNumber}</span>
                 <span>{expirationDate}</span>
                 <span><p>{name}</p></span>
 

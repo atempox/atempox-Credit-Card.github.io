@@ -26,7 +26,7 @@ function onSecurityNumber (event) {
 
     return(
         <div id='userInformation'>
-            <h1>Your Information</h1>
+            <h1>Credit Card Information</h1>
             <form>
                 <label>Name</label>
                 <textarea

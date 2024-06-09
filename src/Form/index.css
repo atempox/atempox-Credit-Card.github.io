@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
 form{
     display: flex;
     flex-direction: column;
-   
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 #userInformation{
     width: 200px;
@@ -9,4 +12,13 @@ form{
    position:relative;
    left: 66%;
    top: -52%;
+}
+
+textarea{
+    border-radius: 5px;
+    
+}
+button{
+    margin-top: 10px;
+    
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 #cardConteiner{
     width: 45%;
     height: 70%;
@@ -8,39 +10,56 @@
 #cardFront {
   width: 350px;
   height: 200px;
-  background-color: red;
   position:absolute;
   top: 10%;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 8px;
+  background-image: url('https://images.pexels.com/photos/545313/pexels-photo-545313.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.163);
 }
 #cardFront span{
  width: 100%;
  height: 20%;
+ font-family: "Chakra Petch", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ font-weight: bold;
+ font-size: large;
 }
 
 #cardBack{
     width: 350px;
     height: 200px;
-    background-color: blue;
+    background-image: url('https://images.pexels.com/photos/751374/pexels-photo-751374.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
     position:absolute;
     right: 0;
     top: 30%;
     z-index: 1;
     padding-top: 100px;
     box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.163);
 }
 #emptyDiv{
     width: 100%;
-    height: 20px;
-    background-color: grey;
+    height: 40px;
+    background-color: black;
+    
 }
 #cardBack span {
-    color: aliceblue;
     width: 50px;
     height: 50px;
     display: inline-block;
     margin-left: 80%;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    font-size: large;
 }
+
