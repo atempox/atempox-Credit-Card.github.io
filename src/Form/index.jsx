@@ -13,20 +13,7 @@ function onName (event) {
     };
 
 function onCreditCardNumber (event) {
-    context.setCreditCardNumber(event.target.value)
-    let newValue = numberInCard(context.creditCardNumber)
-    console.log(newValue)
-    
-    function numberInCard (string) {
-        let result = '';
-        for(let i = 0; i < string.length; i++){
-            if(i > 0 && i % 4 === 0){
-                result += ' ';
-            }
-            result += string[i]
-        }
-        return result
-    }    
+    context.setCreditCardNumber(event.target.value)  
     };
 
 
