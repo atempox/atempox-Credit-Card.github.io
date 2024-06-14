@@ -29,26 +29,26 @@ function onSecurityNumber (event) {
             <h1>Credit Card Information</h1>
             <form>
                 <label>Name</label>
-                <textarea
+                <input
                 type="text"
                 value={context.name}
                 onChange={onName} />
 
                 <label>Credit Card Number</label>
-                <textarea 
+                <input 
                 placeholder="0000 0000 0000 0000" 
                 value={context.creditCardNumber}
                 onChange={onCreditCardNumber}
                 />
 
                 <label>Expiration Date</label>
-                <textarea 
+                <input 
                 placeholder="MM/DD" 
                 value={context.expirationDate}
                 onChange={onExpirationDate}/>
 
                 <label>Security Number</label>
-                <textarea
+                <input
                 placeholder='000'
                 value={context.securityNumber} 
                 onChange={onSecurityNumber}/>
