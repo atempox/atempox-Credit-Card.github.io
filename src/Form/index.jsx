@@ -2,6 +2,7 @@ import './index.css'
 import { InformationContext } from '../Context';
 import React, {useContext} from 'react';
 
+
 const Form = () => {
 
     const context = useContext(InformationContext);
@@ -13,7 +14,22 @@ function onName (event) {
 
 function onCreditCardNumber (event) {
     context.setCreditCardNumber(event.target.value)
+    let newValue = numberInCard(context.creditCardNumber)
+    console.log(newValue)
+    
+    function numberInCard (string) {
+        let result = '';
+        for(let i = 0; i < string.length; i++){
+            if(i > 0 && i % 4 === 0){
+                result += ' ';
+            }
+            result += string[i]
+        }
+        return result
+    }    
     };
+
+
 function onExpirationDate (event) {
     context.setExpirationDate(event.target.value)
     };
@@ -28,27 +44,31 @@ function onSecurityNumber (event) {
         <div id='userInformation'>
             <h1>Credit Card Information</h1>
             <form>
-                <label>Name</label>
-                <input
+                <label htmlFor='name'>Name</label>
+                <textarea
+                id='name'
                 type="text"
                 value={context.name}
                 onChange={onName} />
 
-                <label>Credit Card Number</label>
-                <input 
+                <label htmlFor='number'>Credit Card Number</label>
+                <textarea
+                id='number' 
                 placeholder="0000 0000 0000 0000" 
                 value={context.creditCardNumber}
                 onChange={onCreditCardNumber}
                 />
 
-                <label>Expiration Date</label>
-                <input 
+                <label htmlFor='date'>Expiration Date</label>
+                <textarea
+                id='date' 
                 placeholder="MM/DD" 
                 value={context.expirationDate}
                 onChange={onExpirationDate}/>
 
-                <label>Security Number</label>
-                <input
+                <label htmlFor='security'>Security Number</label>
+                <textarea
+                id='security'
                 placeholder='000'
                 value={context.securityNumber} 
                 onChange={onSecurityNumber}/>
