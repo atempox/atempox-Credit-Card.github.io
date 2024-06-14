@@ -31,15 +31,17 @@ function onSecurityNumber (event) {
         <div id='userInformation'>
             <h1>Credit Card Information</h1>
             <form>
+                <div id='conteinerLabels'> 
+
                 <label htmlFor='name'>Name</label>
-                <textarea
-                id='name'
+                <input
                 type="text"
+                id='name'
                 value={context.name}
                 onChange={onName} />
 
                 <label htmlFor='number'>Credit Card Number</label>
-                <textarea
+                <input
                 id='number' 
                 placeholder="0000 0000 0000 0000" 
                 value={context.creditCardNumber}
@@ -47,22 +49,26 @@ function onSecurityNumber (event) {
                 />
 
                 <label htmlFor='date'>Expiration Date</label>
-                <textarea
+                <input
                 id='date' 
+                type='text'
                 placeholder="MM/DD" 
                 value={context.expirationDate}
                 onChange={onExpirationDate}/>
 
                 <label htmlFor='security'>Security Number</label>
-                <textarea
+                <input
                 id='security'
+                type='text'
                 placeholder='000'
                 value={context.securityNumber} 
                 onChange={onSecurityNumber}/>
-
+                </div>
+                <div id='button'> 
                 <button
                 type='submit'
                 >complete</button>
+                </div>
             </form>            
         </div>
     )

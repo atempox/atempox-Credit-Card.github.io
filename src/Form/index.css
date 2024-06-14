@@ -16,9 +16,26 @@ form{
 
 input{
     border-radius: 5px;
-    margin-top: 5px;    
+    margin-top: 2px; 
+    border: none;   
 }
 button{
-    margin-top: 10px;
-    
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+#conteinerLabels{
+    display: flex;
+    flex-direction: column;
+
+}
+#button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+label{
+    margin-top: 15px;
 }
